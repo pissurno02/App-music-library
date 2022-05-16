@@ -1,0 +1,23 @@
+/* eslint-disable no-trailing-spaces */
+import { Component , ViewChild } from '@angular/core';
+import { IonTabs } from '@ionic/angular';
+@Component({
+  selector: 'app-tabs',
+  templateUrl: 'tabs.page.html',
+  styleUrls: ['tabs.page.scss']
+})
+export class TabsPage {
+
+ @ViewChild('nameInput', {static: false}) tabs: IonTabs;
+  selected = '';
+  progress = 42;
+  
+  constructor() {}
+
+
+  
+  
+  setSelectedTab() {
+    this.selected = this.tabs.getSelected();
+  }
+}
